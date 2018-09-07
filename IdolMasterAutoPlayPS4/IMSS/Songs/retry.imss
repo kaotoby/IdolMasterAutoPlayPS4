@@ -1,0 +1,9 @@
+option 100;
+delay 100;
+dn 100;
+delay 109;
+cir 100;
+delay 300;
+lf 100;
+delay 100;
+cir 100;

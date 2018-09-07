@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<SyntaxDefinition name="IMSS" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+	<Color name="Comment" foreground="Green" />
+	
+	<!-- This is the main ruleset. -->
+	<RuleSet>
+		<Span color="Comment" begin="//" />
+    <Span color="Comment" multiline="true" begin="/\*" end="\*/" />
+		
+    <Keywords fontWeight="bold" background="Orange">
+      <Word>star</Word>
+    </Keywords>
+    <Keywords fontWeight="bold" background="Yellow">
+      <Word>touch</Word>
+    </Keywords>
+    <Keywords fontWeight="bold" background="Gray" foreground="White">
+      <Word>option</Word>
+    </Keywords>
+    
+    <Keywords fontWeight="bold" background="Red" foreground="White">
+      <Word>cir</Word>
+      <Word>rt</Word>
+    </Keywords>
+    <Keywords fontWeight="bold" background="Green" foreground="White">
+      <Word>tri</Word>
+      <Word>up</Word>
+    </Keywords>
+    <Keywords fontWeight="bold" background="HotPink" foreground="White">
+      <Word>sqr</Word>
+      <Word>lf</Word>
+    </Keywords>
+    <Keywords fontWeight="bold" background="Blue" foreground="White">
+      <Word>crx</Word>
+      <Word>dn</Word>
+    </Keywords>
+
+    <Keywords fontWeight="bold" foreground="Black">
+      <Word>+</Word>
+      <Word>-</Word>
+    </Keywords>
+
+    <Keywords fontWeight="bold" foreground="Gray">
+      <Word>delay</Word>
+    </Keywords>
+		
+		<!-- Digits -->
+		<Rule foreground="Gray">\d+</Rule>
+	</RuleSet>
+</SyntaxDefinition>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="IdolMasterAutoPlayPS4.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IdolMasterAutoPlayPS4.Views"
+      xmlns:uc="clr-namespace:IdolMasterAutoPlayPS4.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="670" d:DesignWidth="822"
+      Title="MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <uc:Recorder Grid.RowSpan="2" x:Name="recorder" Width="200"/>
+        <uc:SongSelector Grid.Column="1" Grid.Row="1">
+            <uc:SongSelector.Background>
+                <ImageBrush ImageSource="/Resources/Images/bg.jpg" Stretch="UniformToFill"/>
+            </uc:SongSelector.Background>
+        </uc:SongSelector>
+    </Grid>
+</Page>

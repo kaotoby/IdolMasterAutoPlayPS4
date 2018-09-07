@@ -1,0 +1,438 @@
+﻿<UserControl x:Class="IdolMasterAutoPlayPS4.UserControls.IoDisplayList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IdolMasterAutoPlayPS4.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="250">
+    <Grid Background="Black">
+        <Grid Margin="10,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Foreground" Value="White" />
+                </Style>
+            </Grid.Resources>
+            <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Console: " />
+            <TextBlock x:Name="Console"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Text="None" />
+            <TextBlock Grid.Row="0"
+                   Grid.Column="2"
+                   Text="Controller: " />
+            <TextBlock x:Name="Controller"
+                   Grid.Row="0"
+                   Grid.Column="3"
+                   Text="None" />
+            <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Led 1: " />
+            <TextBlock x:Name="Led1"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Text="Off" />
+            <TextBlock Grid.Row="1"
+                   Grid.Column="2"
+                   Text="Led 2: " />
+            <TextBlock x:Name="Led2"
+                   Grid.Row="1"
+                   Grid.Column="3"
+                   Text="Off" />
+            <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Led 3: " />
+            <TextBlock x:Name="Led3"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Text="Off" />
+            <TextBlock Grid.Row="2"
+                   Grid.Column="2"
+                   Text="Led 4: " />
+            <TextBlock x:Name="Led4"
+                   Grid.Row="2"
+                   Grid.Column="3"
+                   Text="Off" />
+            <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="Rumble A: " />
+            <TextBlock x:Name="RumbleA"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Text="0%" />
+            <TextBlock Grid.Row="3"
+                   Grid.Column="2"
+                   Text="Rumble B: " />
+            <TextBlock x:Name="RumbleB"
+                   Grid.Row="3"
+                   Grid.Column="3"
+                   Text="0%" />
+            <TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   Text="Rumble LT: " />
+            <TextBlock x:Name="RumbleLt"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Text="0%" />
+            <TextBlock Grid.Row="4"
+                   Grid.Column="2"
+                   Text="Rumble RT: " />
+            <TextBlock x:Name="RumbleRt"
+                   Grid.Row="4"
+                   Grid.Column="3"
+                   Text="0%" />
+            <TextBlock Grid.Row="5"
+                   Grid.Column="0"
+                   Text="Slot: " />
+            <TextBlock x:Name="Slot"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Text="0" />
+            <TextBlock Grid.Row="5"
+                   Grid.Column="2"
+                   Text="Battery: " />
+            <TextBlock x:Name="Battery"
+                   Grid.Row="5"
+                   Grid.Column="3"
+                   Text="0%" />
+            <TextBlock Grid.Row="6"
+                   Grid.Column="0"
+                   Text="CpuLoad: " />
+            <TextBlock x:Name="CpuLoad"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Text="0%" />
+            <TextBlock Grid.Row="7"
+                   Grid.Column="0"
+                   Text="Inputs:" />
+            <TextBlock Grid.Row="7"
+                   Grid.Column="2"
+                   Text="Outputs:" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In00"
+                             Grid.Row="8"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out00"
+                             Grid.Row="8"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In01"
+                             Grid.Row="9"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out01"
+                             Grid.Row="9"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In02"
+                             Grid.Row="10"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out02"
+                             Grid.Row="10"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In03"
+                             Grid.Row="11"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out03"
+                             Grid.Row="11"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In04"
+                             Grid.Row="12"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out04"
+                             Grid.Row="12"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In05"
+                             Grid.Row="13"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out05"
+                             Grid.Row="13"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In06"
+                             Grid.Row="14"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out06"
+                             Grid.Row="14"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In07"
+                             Grid.Row="15"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out07"
+                             Grid.Row="15"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In08"
+                             Grid.Row="16"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out08"
+                             Grid.Row="16"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In09"
+                             Grid.Row="17"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out09"
+                             Grid.Row="17"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In10"
+                             Grid.Row="18"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out10"
+                             Grid.Row="18"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In11"
+                             Grid.Row="19"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out11"
+                             Grid.Row="19"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In12"
+                             Grid.Row="20"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out12"
+                             Grid.Row="20"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In13"
+                             Grid.Row="21"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out13"
+                             Grid.Row="21"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In14"
+                             Grid.Row="22"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out14"
+                             Grid.Row="22"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In15"
+                             Grid.Row="23"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out15"
+                             Grid.Row="23"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In16"
+                             Grid.Row="24"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out16"
+                             Grid.Row="24"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In17"
+                             Grid.Row="25"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out17"
+                             Grid.Row="25"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In18"
+                             Grid.Row="26"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out18"
+                             Grid.Row="26"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In19"
+                             Grid.Row="27"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out19"
+                             Grid.Row="27"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In20"
+                             Grid.Row="28"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out20"
+                             Grid.Row="28"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In21"
+                             Grid.Row="29"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out21"
+                             Grid.Row="29"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In22"
+                             Grid.Row="30"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out22"
+                             Grid.Row="30"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In23"
+                             Grid.Row="31"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out23"
+                             Grid.Row="31"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In24"
+                             Grid.Row="32"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out24"
+                             Grid.Row="32"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In25"
+                             Grid.Row="33"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out25"
+                             Grid.Row="33"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In26"
+                             Grid.Row="34"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out26"
+                             Grid.Row="34"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In27"
+                             Grid.Row="35"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out27"
+                             Grid.Row="35"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In28"
+                             Grid.Row="36"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out28"
+                             Grid.Row="36"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="In29"
+                             Grid.Row="37"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Out29"
+                             Grid.Row="37"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2" />
+            <TextBlock Grid.Row="38"
+                   Grid.Column="0"
+                   Text="Trace:" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Trace1"
+                             Grid.Row="39"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             ValueName="TRACE_1" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Trace2"
+                             Grid.Row="40"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             ValueName="TRACE_2" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Trace3"
+                             Grid.Row="41"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             ValueName="TRACE_3" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Trace4"
+                             Grid.Row="39"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             ValueName="TRACE_4" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Trace5"
+                             Grid.Row="40"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             ValueName="TRACE_5" />
+            <local:IoDisplay Margin="0, 0, 10, 0" x:Name="Trace6"
+                             Grid.Row="41"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             ValueName="TRACE_6" />
+        </Grid>
+    </Grid>
+</UserControl>

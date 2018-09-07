@@ -1,0 +1,58 @@
+﻿<Window x:Class="IdolMasterAutoPlayPS4.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IdolMasterAutoPlayPS4.Views"
+        xmlns:uc="clr-namespace:IdolMasterAutoPlayPS4.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280" MinHeight="720" MinWidth="1280">
+    <Window.Resources>
+        <local:InformationBackgroundValueConveter x:Key="BackgroundConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="frMain" Source="MainPage.xaml" NavigationUIVisibility="Hidden" />
+        <uc:CommandList Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" x:Name="CmdList" />
+
+        <uc:IoDisplayList Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" x:Name="IoDisplay" />
+        <Grid Grid.Row="1" Background="{Binding Text, Converter={StaticResource BackgroundConverter}, ElementName=StateBlock}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <TextBlock Grid.Column="1" Text="Status: " />
+            <TextBlock Grid.Column="2" x:Name="StateBlock" Text="Disconnected" />
+            <TextBlock Grid.Column="4" Text="Firmware: " />
+            <TextBlock Grid.Column="5" x:Name="FwBlock" Text="Unknown" />
+            <TextBlock Grid.Column="7" Text="Op Mode: " />
+            <TextBlock Grid.Column="8" x:Name="OpModeBlock" Text="Unknown" />
+            <TextBlock Grid.Column="10" Text="Hub Compatible: " />
+            <TextBlock Grid.Column="11" x:Name="HubCompatibleBlock" Text="No" />
+        </Grid>
+    </Grid>
+</Window>
